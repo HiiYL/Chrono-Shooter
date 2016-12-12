@@ -39,6 +39,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
+
         }
 
 
@@ -48,6 +49,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
+
+			if (v != 0 || h != 0) {
+				if (Time.timeScale != 1.0f) {
+					Time.timeScale = 1.0f;
+					Time.fixedDeltaTime = 0.02F;
+				}
+			} else {
+				if (Time.timeScale == 1.0f) {
+					Time.timeScale = 0.2f;
+					Time.fixedDeltaTime = 0.02F * Time.timeScale;
+				}
+			}
             bool crouch = Input.GetKey(KeyCode.C);
 
             // calculate move direction to pass to character
@@ -70,6 +83,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // pass all parameters to the character control script
             m_Character.Move(m_Move, crouch, m_Jump);
             m_Jump = false;
+
         }
     }
 }
