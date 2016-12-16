@@ -131,7 +131,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155060}
-  m_Mesh: {fileID: 4300000, guid: 5311afa115791b64cba3e297837eac07, type: 3}
+  m_Mesh: {fileID: 4300000, guid: f6d2327de708247b3bb13c470e96fee9, type: 3}
 --- !u!123 &12327714
 LensFlare:
   m_ObjectHideFlags: 1
@@ -2884,4 +2884,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b79778f95e8edb4a9770ec861470a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 5
