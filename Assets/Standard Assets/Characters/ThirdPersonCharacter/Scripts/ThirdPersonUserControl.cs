@@ -7,13 +7,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     [RequireComponent(typeof (ThirdPersonCharacter))]
     public class ThirdPersonUserControl : MonoBehaviour
     {
+        public float fireRate;
+        public Transform shotSpawn;
+        public GameObject shot;
+
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
+        private float nextFire;
 
-        
         private void Start()
         {
             // get the transform of the main camera
@@ -35,17 +39,25 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (!m_Jump)
+            if (!m_Jump) 
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
 
+            if (Input.GetButton("Fire1") && Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
+                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+                GetComponent<AudioSource>().Play();
+            }
         }
 
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
+            
+
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");

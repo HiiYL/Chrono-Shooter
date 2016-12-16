@@ -15,10 +15,12 @@ public class Player : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter (Collision col){
-		print (col.gameObject.tag);
-		if (col.gameObject.tag == "Obstacle") {
-			Instantiate (explosion, transform.position, Quaternion.identity);
+	void OnTriggerEnter(Collider other){
+		print (other.tag);
+		if (other.gameObject.tag == "Obstacle") {
+            Vector3 trans = transform.position;
+            trans.y += 5;
+			Instantiate (explosion, trans, Quaternion.identity);
 
 //			Destroy (col.gameObject);
 		}
