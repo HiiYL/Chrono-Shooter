@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < 150; i++) {
 			GameObject obj = Instantiate (obstacle, player.transform.position
-				+ new Vector3 (Random.Range(-5,5), Random.Range(1,2), Random.Range(10,300)), Quaternion.identity);
+				+ new Vector3 (Random.Range(-5,5), Random.Range(1,2), Random.Range(10,400)), Quaternion.identity);
 			
 			obj.transform.localScale += new Vector3(Random.Range (0.5f, 1.5f),Random.Range (0.5f, 1.5f),Random.Range (0.5f, 1.5f));
 			
