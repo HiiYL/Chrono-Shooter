@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Target: {fileID: 1644772261}
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
-  m_MoveSpeed: 3
+  m_MoveSpeed: 5
   m_TurnSpeed: 1
   m_RollSpeed: 0.2
   m_FollowVelocity: 1
@@ -228,7 +228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b9468a2648f42a9ba8cc4393c7d427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 1964929396324040, guid: f3f56d16b60284021a1acaff72593617, type: 2}
+  obstacles:
+  - {fileID: 1964929396324040, guid: f3f56d16b60284021a1acaff72593617, type: 2}
+  - {fileID: 1596503788410642, guid: 45f2edb4261194f5cb07b43c2b03eb84, type: 2}
+  - {fileID: 1114722384424638, guid: 47558b91a1a25469fa9cef58016c0da8, type: 2}
   player: {fileID: 1650823016}
 --- !u!4 &533491817
 Transform:
@@ -403,6 +406,34 @@ Prefab:
       propertyPath: explosion
       value: 
       objectReference: {fileID: 100000, guid: 0315cb4a52ecd4a46a4fe8f3b3500557, type: 2}
+    - target: {fileID: 5426510, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426510, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426510, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_JumpPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_GravityMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_MovingTurnSpeed
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_StationaryTurnSpeed
+      value: 720
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabParent: 0
@@ -431,7 +462,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

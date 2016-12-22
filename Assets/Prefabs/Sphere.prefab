@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1964929396324040}
+  m_RootGameObject: {fileID: 1114722384424638}
   m_IsPrefabParent: 1
---- !u!1 &1964929396324040
+--- !u!1 &1114722384424638
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4824162689821326}
-  - component: {fileID: 33238777461222782}
-  - component: {fileID: 65486857475174040}
-  - component: {fileID: 23292448955757816}
-  - component: {fileID: 114975907993883330}
-  - component: {fileID: 114703796865278788}
+  - component: {fileID: 4273541103895762}
+  - component: {fileID: 33068203327529928}
+  - component: {fileID: 135762515422024032}
+  - component: {fileID: 23411237622989392}
+  - component: {fileID: 114971726695088236}
+  - component: {fileID: 114066115619394120}
   m_Layer: 0
-  m_Name: Box
-  m_TagString: Obstacle
+  m_Name: Sphere
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4824162689821326
+--- !u!4 &4273541103895762
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964929396324040}
+  m_GameObject: {fileID: 1114722384424638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09475789, y: 1.27, z: 13.75}
+  m_LocalPosition: {x: 0, y: 1.0419998, z: 0.45700073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23292448955757816
+--- !u!23 &23411237622989392
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964929396324040}
+  m_GameObject: {fileID: 1114722384424638}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: df751707124e64ab5a140d9173150b52, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,31 +75,19 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33238777461222782
+--- !u!33 &33068203327529928
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964929396324040}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65486857475174040
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964929396324040}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114703796865278788
+  m_GameObject: {fileID: 1114722384424638}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114066115619394120
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964929396324040}
+  m_GameObject: {fileID: 1114722384424638}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceacc7046d190cd4fb0b8baaf5bcaca0, type: 3}
@@ -108,12 +96,12 @@ MonoBehaviour:
   explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   playerExplosion: {fileID: 0}
   scoreValue: 0
---- !u!114 &114975907993883330
+--- !u!114 &114971726695088236
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1964929396324040}
+  m_GameObject: {fileID: 1114722384424638}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba99850b30d8b42f9900647240ebdefe, type: 3}
@@ -123,3 +111,15 @@ MonoBehaviour:
   minBoxSpeed: 7
   boxSpeed: 0
   moveBehaviour: 2
+--- !u!135 &135762515422024032
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1114722384424638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
