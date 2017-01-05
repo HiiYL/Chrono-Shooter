@@ -8257,11 +8257,6 @@ Prefab:
       propertyPath: m_Name
       value: ToonSodier
       objectReference: {fileID: 0}
-    - target: {fileID: 54642847358856110, guid: 7f78a1db19653304882c4326828f3d28,
-        type: 2}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f78a1db19653304882c4326828f3d28, type: 2}
   m_IsPrefabParent: 0
