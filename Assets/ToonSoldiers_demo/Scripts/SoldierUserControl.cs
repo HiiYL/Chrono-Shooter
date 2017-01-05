@@ -64,7 +64,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             float v = CrossPlatformInputManager.GetAxis("Vertical");
 
             Vector3 movement = new Vector3(h, 0.0f, v);
+            var y_vel = rigidbody.velocity.y;
             rigidbody.velocity = movement * 5;
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, y_vel, rigidbody.velocity.z);
 
             if (v != 0 || h != 0)
             {
