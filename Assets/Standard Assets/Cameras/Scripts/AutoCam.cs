@@ -85,7 +85,7 @@ namespace UnityStandardAssets.Cameras
             }
 
             // camera position moves towards target position:
-			transform.position = Vector3.Lerp(transform.position, ( m_Target.position + new Vector3(0,1.5f,0) + transform.forward * -1.5f), deltaTime*m_MoveSpeed);
+			transform.position = Vector3.Lerp(transform.position, ( m_Target.position + new Vector3(0,5f,0) + transform.forward * -5.5f), deltaTime*m_MoveSpeed);
 
             // camera's rotation is split into two parts, which can have independend speed settings:
             // rotating towards the target's forward direction (which encompasses its 'yaw' and 'pitch')
