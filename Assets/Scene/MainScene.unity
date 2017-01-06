@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
-  - {fileID: 1596503788410642, guid: 45f2edb4261194f5cb07b43c2b03eb84, type: 2}
+  - {fileID: 1964929396324040, guid: f3f56d16b60284021a1acaff72593617, type: 2}
   - {fileID: 1938221977}
   player: {fileID: 366444493}
 --- !u!4 &533491817
@@ -8028,6 +8028,24 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: ca4f429bff30e114a8b497d43f14b15e, type: 3}
   m_PrefabInternal: {fileID: 1381460395}
+--- !u!1 &1387513033 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100054, guid: 62a1903fd3708d7499742985e02168a7, type: 3}
+  m_PrefabInternal: {fileID: 1673963483}
+--- !u!64 &1387513037
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387513033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 62a1903fd3708d7499742985e02168a7, type: 3}
 --- !u!1001 &1388469855
 Prefab:
   m_ObjectHideFlags: 0
@@ -8227,7 +8245,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4406539740983780, guid: 7f78a1db19653304882c4326828f3d28, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.008167267
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 4406539740983780, guid: 7f78a1db19653304882c4326828f3d28, type: 2}
       propertyPath: m_LocalPosition.z
