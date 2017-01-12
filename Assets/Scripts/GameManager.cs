@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 	public GameObject[] obstacles;
 	public GameObject player;
-
+    public static int HealthPacks = 1;
 
 	// Use this for initialization
 	void Start () {
