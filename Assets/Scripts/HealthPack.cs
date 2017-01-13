@@ -5,11 +5,12 @@ using UnityEngine;
 public class HealthPack : MonoBehaviour {
 
     public GameObject explosion;
+    private HealthManager healthManager;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        healthManager = FindObjectOfType<HealthManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,12 +26,11 @@ public class HealthPack : MonoBehaviour {
 
         if (other.tag == "Player")
         {
-            // Die!
             Destroy(gameObject);
             Debug.Log("Health Pack!!");
+            healthManager.Health += 1;
         }
-
-        if (other.tag == "Projectile")
+        else if (other.tag == "Projectile")
         {
             Destroy(other.gameObject);
             Destroy(gameObject);

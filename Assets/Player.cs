@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	public GameObject explosion;
+    public HealthManager healthManager;
 
 	// Use this for initialization
 	void Start () {
@@ -21,9 +22,9 @@ public class Player : MonoBehaviour {
             Vector3 trans = transform.position;
             trans.y += 5;
 			Instantiate (explosion, trans, Quaternion.identity);
-
+            healthManager.Health -= 1;
 //			Destroy (col.gameObject);
-		}
+        }
 		
 	}
 }
