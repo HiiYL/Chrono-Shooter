@@ -6,6 +6,8 @@ using System.Linq;
 public class HealthManager : MonoBehaviour {
 
     public GameObject healthHUD;
+	public GameObject gameOverPanel;
+	GameObject player;
 
     public int Health
     {
@@ -14,6 +16,8 @@ public class HealthManager : MonoBehaviour {
             if (value == 0)
             {
                 // death!
+				player.SetActive(false);
+				gameOverPanel.SetActive(true);
                 return;
             }
 
@@ -40,6 +44,7 @@ public class HealthManager : MonoBehaviour {
 	void Start () {
         hearts = new List<GameObject>();
         Health = currentHealth;
+		player = GameObject.FindGameObjectWithTag ("Player");
     }
 	
 	// Update is called once per frame
