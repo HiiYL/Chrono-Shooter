@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2940,10 +2940,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles:
-  - {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
-  - {fileID: 1458309965011254, guid: 510494534d674b245bcf1cce4bc88581, type: 2}
-  - {fileID: 1123319363891450, guid: 087fed6614aed4411b302f6acf2505be, type: 2}
+  - spawnWeight: 1
+    gameObj: {fileID: 1458309965011254, guid: 510494534d674b245bcf1cce4bc88581, type: 2}
+  - spawnWeight: 1
+    gameObj: {fileID: 1123319363891450, guid: 087fed6614aed4411b302f6acf2505be, type: 2}
+  - spawnWeight: 5
+    gameObj: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
   player: {fileID: 366444493}
+  objectsToSpawn: 120
+  totalWeights: 0
 --- !u!4 &533491817
 Transform:
   m_ObjectHideFlags: 0
