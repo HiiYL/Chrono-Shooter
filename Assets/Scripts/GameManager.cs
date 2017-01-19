@@ -10,10 +10,13 @@ public struct SpawnableObject {
 public class GameManager : MonoBehaviour {
 	public SpawnableObject[] obstacles;
 	public GameObject player;
+	public GameObject pauseMenu;
     public static int HealthPacks = 1;
 	public int objectsToSpawn = 120;
 
 	public int totalWeights = 0;
+
+	public float pauseCooldown = 0.3f;
 
 	// Use this for initialization
 	void Start () {
@@ -22,8 +25,6 @@ public class GameManager : MonoBehaviour {
 		}
 
 		for (int i = 0; i < objectsToSpawn; i++) {
-			GameObject gameObjectToSpawn;
-
 			int selectedIdx = Random.Range (0, totalWeights);
 			print (selectedIdx);
 			foreach (SpawnableObject obstacle in obstacles) {
@@ -36,13 +37,21 @@ public class GameManager : MonoBehaviour {
 					break;
 				}
 			}
-			print ("");
-
 			//obj.transform.localScale += new Vector3(Random.Range (0.5f, 1.5f),Random.Range (0.2f, 1.2f),Random.Range (0.5f, 1.5f));
 		}
 	}
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyUp (KeyCode.Escape)) {
+			print ("Key Pressed");
+			if(!pauseMenu.activeSelf)
+			{
+				Time.timeScale = 0;
+			} else{
+				Time.timeScale = 1;
+			}
+			pauseMenu.SetActive (!pauseMenu.activeSelf);
+		}
 
 	}
 }
