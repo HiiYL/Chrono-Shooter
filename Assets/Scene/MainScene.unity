@@ -3147,9 +3147,10 @@ MonoBehaviour:
     gameObj: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
   player: {fileID: 366444493}
   pauseMenu: {fileID: 1226500247}
-  objectsToSpawn: 250
+  objectsToSpawn: 5
   totalWeights: 0
   pauseCooldown: 0.3
+  chunkLoadDist: 5
 --- !u!4 &533491817
 Transform:
   m_ObjectHideFlags: 0
