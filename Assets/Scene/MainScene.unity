@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3411,11 +3411,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 366444493}
   pauseMenu: {fileID: 1226500247}
-  objectsToSpawn: 5
+  objectsToSpawn: 3
   minX: -3.37
   maxX: 3.5
   pauseCooldown: 0.3
-  chunkLoadDist: 5
+  chunkLoadDist: 1
   startPos: {x: 0, y: 0, z: 0}
 --- !u!4 &533491817
 Transform:
@@ -11235,6 +11235,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1131510433704750, guid: 2cec2d0366eefc84587604d740a10651,
         type: 2}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: poolSize
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
   m_IsPrefabParent: 0

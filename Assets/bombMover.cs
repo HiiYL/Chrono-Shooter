@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Effects;
 
 public class bombMover : MonoBehaviour {
     public int maxBoxSpeed = 30;
     public int minBoxSpeed = 25;
 
     public float detectionRange = 25;
+	public GameObject explosion;
 
     private float boxSpeed;
     private GameObject player;
@@ -30,4 +32,16 @@ public class bombMover : MonoBehaviour {
         }
         transform.Translate(Vector3.forward * Time.deltaTime * boxSpeed);
     }
+
+//	void OnCollisionEnter(Collision collision)
+//	{
+//		if (collision.gameObject.tag == "Ground") {
+//			if (explosion != null) {
+//				GameObject explosionObj = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
+//				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 1;
+//				explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 4;
+//			}
+//			gameObject.SetActive (false);
+//		}
+//	}
 }

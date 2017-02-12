@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
             trans.y += 5;
             Instantiate(explosion, trans, Quaternion.identity);
             healthManager.Health -= 1;
-            Destroy(collision.gameObject);
+			collision.gameObject.SetActive (false);
             //			Destroy (col.gameObject);
         }
     }

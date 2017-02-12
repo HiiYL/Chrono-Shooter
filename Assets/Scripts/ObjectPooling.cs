@@ -13,6 +13,8 @@ public class ObjectPooling : MonoBehaviour
     public GameObject bullet;
     public int poolSize;
 
+	public int bulletPoolSize = 100;
+
 
 
     private GameObject[] pool;
@@ -38,7 +40,7 @@ public class ObjectPooling : MonoBehaviour
                 //print(selectedIdx);
                 if (selectedIdx <= 1)
                 {
-                    pool[i] = (GameObject)Instantiate(obstacle.gameObj, transform.position,
+					pool[i] = (GameObject)Instantiate(obstacle.gameObj, obstacle.gameObj.transform.position,
                         obstacle.gameObj.transform.rotation);
                     pool[i].transform.parent = transform;
                     pool[i].SetActive(false);
@@ -46,8 +48,8 @@ public class ObjectPooling : MonoBehaviour
                 }
             }
         }
-        bulletPool = new GameObject[poolSize];
-        for (int i = 0; i < poolSize; i++)
+		bulletPool = new GameObject[bulletPoolSize];
+		for (int i = 0; i < bulletPoolSize; i++)
         {
             bulletPool[i] = (GameObject)Instantiate(bullet, transform.position, bullet.transform.rotation);
             bulletPool[i].transform.parent = transform;
@@ -60,13 +62,13 @@ public class ObjectPooling : MonoBehaviour
         //print(pool.Length);
         foreach (GameObject go in pool)
         {
-            if (go != null && !go.activeSelf)
+            if (!go.activeSelf)
             {
                 go.SetActive(true);
                 return go;
             }
         }
-
+		print ("ran out of objects");
         return null;
     }
     public GameObject RetrieveBulletInstance()
@@ -86,6 +88,10 @@ public class ObjectPooling : MonoBehaviour
 
     public void DevolveInstance(GameObject go)
     {
+		if (go.GetComponent<TrailRenderer>())
+		{
+			go.GetComponent<TrailRenderer>().Clear();
+		}
         go.GetComponent<Rigidbody>().velocity = Vector3.zero;
         go.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         go.SetActive(false);

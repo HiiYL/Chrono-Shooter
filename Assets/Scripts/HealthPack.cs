@@ -27,7 +27,7 @@ public class HealthPack : MonoBehaviour {
 
         if (tag == "Player")
         {
-            Destroy(gameObject);
+			gameObject.SetActive (false);
             Debug.Log("Health Pack!!");
             healthManager.Health += 1;
         }

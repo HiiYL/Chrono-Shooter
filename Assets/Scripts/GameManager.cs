@@ -32,13 +32,6 @@ public class GameManager : MonoBehaviour {
     void Start () {
         pool = GameObject.FindGameObjectWithTag("ObstaclePool").GetComponent<ObjectPooling>();
 		currentPlayerZCoord = player.transform.position.z;
-		for (int i = 0; i < objectsToSpawn; i++) {
-            obj = pool.RetrieveInstance();
-            if (obj)
-            {
-                obj.transform.position = startPos + new Vector3(Random.Range(minX, maxX), 2, player.transform.position.z + Random.Range(50, 100));
-            }
-		}
 	}
 	// Update is called once per frame
 	void Update () {
@@ -58,14 +51,15 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 	void chunkUpdateTrack(){
-		//print ("Called Spawn Chunk!");
 		if ((playerMoved / chunkLoadDist) > chunksLoaded ) {
+			print ("Called Spawn Chunk!" + chunksLoaded);
 			for (int i = 0; i < objectsToSpawn; i++) {
                 obj = pool.RetrieveInstance();
-                if (obj)
-                {
-                    obj.transform.position = startPos + new Vector3(Random.Range(minX, maxX), 2, player.transform.position.z + Random.Range(50, 100));
-                }
+				if (obj) {
+					obj.transform.position = startPos +
+					new Vector3 (Random.Range (minX, maxX), 2,
+							player.transform.position.z + Random.Range (50, 50 + chunkLoadDist));
+				}
 			}
 			chunksLoaded = chunksLoaded + 1;
 		}

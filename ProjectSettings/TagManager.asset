@@ -10,6 +10,7 @@ TagManager:
   - ObstaclePool
   - Consumables
   - Obstacle-Bomb
+  - Ground
   layers:
   - Default
   - TransparentFX

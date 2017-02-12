@@ -25,7 +25,7 @@ public class DestroyOnContact : MonoBehaviour {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
             //Destroy(other.gameObject);
-            Destroy(gameObject);
+			gameObject.SetActive(false);
         }
 
         if (other.tag == "Obstacle-Bomb")
@@ -36,8 +36,8 @@ public class DestroyOnContact : MonoBehaviour {
                 explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 3;
                 explosionObj.GetComponent<ParticleSystemMultiplier>().multiplier = 4;
             }
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+			other.gameObject.SetActive(false);
+			gameObject.SetActive (false);
         }
 
     }
