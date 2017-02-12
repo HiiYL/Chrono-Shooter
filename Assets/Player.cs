@@ -16,15 +16,20 @@ public class Player : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter(Collider other){
-		print (other.tag);
-		if (other.gameObject.tag == "Obstacle") {
+    //void OnTriggerEnter(Collider other){
+
+
+    //}
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Obstacle")
+        {
             Vector3 trans = transform.position;
             trans.y += 5;
-			Instantiate (explosion, trans, Quaternion.identity);
+            Instantiate(explosion, trans, Quaternion.identity);
             healthManager.Health -= 1;
-//			Destroy (col.gameObject);
+            Destroy(collision.gameObject);
+            //			Destroy (col.gameObject);
         }
-		
-	}
+    }
 }

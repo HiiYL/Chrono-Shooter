@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
             obj = pool.RetrieveInstance();
             if (obj)
             {
-                obj.transform.position = player.transform.position + new Vector3(Random.Range(-5, 5), Random.Range(0, 2), Random.Range(50, 100));
+                obj.transform.position = new Vector3(Random.Range(-3, 3), 2, player.transform.position.z + Random.Range(50, 100));
             }
 		}
 	}
@@ -60,13 +60,13 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 	void chunkUpdateTrack(){
-		print ("Called Spawn Chunk!");
+		//print ("Called Spawn Chunk!");
 		if ((playerMoved / chunkLoadDist) > chunksLoaded ) {
 			for (int i = 0; i < objectsToSpawn; i++) {
                 obj = pool.RetrieveInstance();
                 if (obj)
                 {
-                    obj.transform.position = player.transform.position + new Vector3(Random.Range(-5, 5), 0, Random.Range(50, 100));
+                    obj.transform.position = new Vector3(Random.Range(-3, 3), 2, player.transform.position.z + Random.Range(50, 100));
                 }
 			}
 			chunksLoaded = chunksLoaded + 1;

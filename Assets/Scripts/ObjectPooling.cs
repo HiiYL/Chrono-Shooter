@@ -49,7 +49,7 @@ public class ObjectPooling : MonoBehaviour
         print(pool.Length);
         foreach (GameObject go in pool)
         {
-            if (!go.activeSelf)
+            if (go != null && !go.activeSelf)
             {
                 go.SetActive(true);
                 return go;

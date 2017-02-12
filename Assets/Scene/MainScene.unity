@@ -10380,6 +10380,22 @@ Prefab:
       propertyPath: healthManager
       value: 
       objectReference: {fileID: 1417425347}
+    - target: {fileID: 114797507560191770, guid: 7f78a1db19653304882c4326828f3d28,
+        type: 2}
+      propertyPath: shot
+      value: 
+      objectReference: {fileID: 1131510433704750, guid: 2cec2d0366eefc84587604d740a10651,
+        type: 2}
+    - target: {fileID: 136128937902684134, guid: 7f78a1db19653304882c4326828f3d28,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54642847358856110, guid: 7f78a1db19653304882c4326828f3d28,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f78a1db19653304882c4326828f3d28, type: 2}
   m_IsPrefabParent: 0

@@ -579,7 +579,7 @@ MonoBehaviour:
   - spawnWeight: 1
     gameObj: {fileID: 1123319363891450, guid: 087fed6614aed4411b302f6acf2505be, type: 2}
   - spawnWeight: 5
-    gameObj: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
+    gameObj: {fileID: 1639173763776078, guid: 3e3876d832cd3b045b5a2f2435605c77, type: 2}
   player: {fileID: 1482540348}
   pauseMenu: {fileID: 1397243657}
   objectsToSpawn: 20
