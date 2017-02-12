@@ -33,7 +33,7 @@ public class DestroyOnContact : MonoBehaviour {
             if (explosion != null)
             {
                 GameObject explosionObj = (GameObject) Instantiate(explosion, transform.position, transform.rotation);
-                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 5;
+                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 3;
                 explosionObj.GetComponent<ParticleSystemMultiplier>().multiplier = 4;
             }
             Destroy(other.gameObject);

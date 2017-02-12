@@ -10,9 +10,13 @@ public struct SpawnableObject
 public class ObjectPooling : MonoBehaviour
 {
     public SpawnableObject[] obstacles;
+    public GameObject bullet;
     public int poolSize;
 
+
+
     private GameObject[] pool;
+    private GameObject[] bulletPool;
     private int totalWeights = 0;
 
     void Start()
@@ -42,6 +46,13 @@ public class ObjectPooling : MonoBehaviour
                 }
             }
         }
+        bulletPool = new GameObject[poolSize];
+        for (int i = 0; i < poolSize; i++)
+        {
+            bulletPool[i] = (GameObject)Instantiate(bullet, transform.position, bullet.transform.rotation);
+            bulletPool[i].transform.parent = transform;
+            bulletPool[i].SetActive(false);
+        }
     }
 
     public GameObject RetrieveInstance()
@@ -58,14 +69,25 @@ public class ObjectPooling : MonoBehaviour
 
         return null;
     }
+    public GameObject RetrieveBulletInstance()
+    {
+        foreach (GameObject go in bulletPool)
+        {
+            if (go != null && !go.activeSelf)
+            {
+                go.SetActive(true);
+                return go;
+            }
+        }
+
+        return null;
+
+    }
 
     public void DevolveInstance(GameObject go)
     {
-        if (go.GetComponent<TrailRenderer>())
-        {
-            go.GetComponent<TrailRenderer>().Clear();
-        }
-        go.layer = LayerMask.NameToLayer("Default");
+        go.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        go.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         go.SetActive(false);
     }
 }

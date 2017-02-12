@@ -13695,13 +13695,23 @@ Prefab:
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[2].spawnWeight
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[2].gameObj
       value: 
       objectReference: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
+    - target: {fileID: 1176888936947768, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
+      propertyPath: m_Name
+      value: ObjectPool
+      objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1131510433704750, guid: 2cec2d0366eefc84587604d740a10651,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
   m_IsPrefabParent: 0
@@ -27132,6 +27142,10 @@ Prefab:
     - target: {fileID: 400012, guid: 5a25b4d63655d804c912031f88662156, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 5a25b4d63655d804c912031f88662156, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a25b4d63655d804c912031f88662156, type: 3}
@@ -58681,6 +58695,11 @@ Prefab:
       propertyPath: m_MoveSpeedMultiplier
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114545176933129394, guid: 99731e58a72eeed4f83149e9c29b789c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99731e58a72eeed4f83149e9c29b789c, type: 2}
   m_IsPrefabParent: 0
@@ -59106,8 +59125,8 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100028, guid: cbac5c40bbb3a7b4d9c54abfbe7e3e9b, type: 3}
   m_PrefabInternal: {fileID: 1895818173}
---- !u!64 &2058386073
-MeshCollider:
+--- !u!65 &2058386073
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -59116,10 +59135,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: cbac5c40bbb3a7b4d9c54abfbe7e3e9b, type: 3}
+  m_Size: {x: 4.7119336, y: 3.5401626, z: 0.8684988}
+  m_Center: {x: 0.8505126, y: 0.061156217, z: -0.31449744}
 --- !u!1 &2059387307
 GameObject:
   m_ObjectHideFlags: 0

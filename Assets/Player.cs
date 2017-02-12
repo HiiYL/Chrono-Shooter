@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
     //}
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Obstacle-Bomb")
         {
             Vector3 trans = transform.position;
             trans.y += 5;

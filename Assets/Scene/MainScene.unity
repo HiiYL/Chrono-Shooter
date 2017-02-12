@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3412,6 +3412,8 @@ MonoBehaviour:
   player: {fileID: 366444493}
   pauseMenu: {fileID: 1226500247}
   objectsToSpawn: 5
+  minX: -3.37
+  maxX: 3.5
   pauseCooldown: 0.3
   chunkLoadDist: 5
   startPos: {x: 0, y: 0, z: 0}
@@ -11223,6 +11225,16 @@ Prefab:
       propertyPath: obstacles.Array.data[2].gameObj
       value: 
       objectReference: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
+    - target: {fileID: 1176888936947768, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
+      propertyPath: m_Name
+      value: ObjectPool
+      objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1131510433704750, guid: 2cec2d0366eefc84587604d740a10651,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
   m_IsPrefabParent: 0

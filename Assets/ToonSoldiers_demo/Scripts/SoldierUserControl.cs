@@ -18,6 +18,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private new Rigidbody rigidbody;
         private Animator m_Animator;
 
+        private ObjectPooling pool;
+
         private void Start()
         {
             rigidbody = GetComponent<Rigidbody>();
@@ -34,6 +36,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.", gameObject);
                 // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
             }
+            pool = GameObject.FindGameObjectWithTag("ObstaclePool").GetComponent<ObjectPooling>();
 
         }
 
@@ -44,7 +47,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Animator.SetBool("isShooting", true);
                 nextFire = Time.time + fireRate;
-                Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+                GameObject go = pool.RetrieveBulletInstance();
+                go.transform.position = shotSpawn.position;
+                go.transform.rotation = shotSpawn.rotation;
+                //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
                 GetComponent<AudioSource>().Play();
             }
             else

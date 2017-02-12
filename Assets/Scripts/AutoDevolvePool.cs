@@ -16,7 +16,9 @@ public class AutoDevolvePool : MonoBehaviour
 
     void Update()
     {
-        if ((player.transform.position.z - transform.position.z) > cullRange)
+        if (((player.transform.position.z - transform.position.z) > cullRange) ||
+            (Mathf.Abs(player.transform.position.x - transform.position.x) > 30) ||
+            (Mathf.Abs(player.transform.position.y - transform.position.y) > 30))
         {
             pooling.DevolveInstance(gameObject);
         }

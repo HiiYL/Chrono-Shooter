@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 54839586884109488}
   - component: {fileID: 65729464220438532}
   - component: {fileID: 114524182956722036}
+  - component: {fileID: 114357667123137556}
   m_Layer: 0
   m_Name: missile
   m_TagString: Projectile
@@ -235,6 +236,18 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114357667123137556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131510433704750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d689a03ddcdb44b910e7945eb48745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cullRange: 5
 --- !u!114 &114414173406953664
 MonoBehaviour:
   m_ObjectHideFlags: 1

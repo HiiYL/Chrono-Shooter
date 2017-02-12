@@ -14,6 +14,7 @@ public class MissileMover : MonoBehaviour {
 	void Update() {
 //		GetComponent<Rigidbody> ().velocity = emptyVector;
 		transform.position += transform.forward * speed * Time.deltaTime;
+
 	}
 
 }
