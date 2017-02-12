@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Box : MonoBehaviour {
-	public int maxBoxSpeed = 1;
-	public int minBoxSpeed = 7;
+	public int maxBoxSpeed = 7;
+	public int minBoxSpeed = 1;
 
 
 	public float boxSpeed;

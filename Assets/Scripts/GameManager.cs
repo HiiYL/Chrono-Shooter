@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour {
     public static int HealthPacks = 1;
 	public int objectsToSpawn = 120;
 
+    public float minX = -3.37f;
+    public float maxX = 3.5f;
+
 	
 
 	public float pauseCooldown = 0.3f;
@@ -33,7 +36,7 @@ public class GameManager : MonoBehaviour {
             obj = pool.RetrieveInstance();
             if (obj)
             {
-                obj.transform.position = startPos + new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
+                obj.transform.position = startPos + new Vector3(Random.Range(minX, maxX), 2, player.transform.position.z + Random.Range(50, 100));
             }
 		}
 	}
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour {
                 obj = pool.RetrieveInstance();
                 if (obj)
                 {
-                    obj.transform.position = startPos + new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
+                    obj.transform.position = startPos + new Vector3(Random.Range(minX, maxX), 2, player.transform.position.z + Random.Range(50, 100));
                 }
 			}
 			chunksLoaded = chunksLoaded + 1;
