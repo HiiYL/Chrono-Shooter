@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AutoDevolvePool : MonoBehaviour
 {
-    public int cullRange = 0;
+    public int cullRange = 5;
 
     private ObjectPooling pooling;
     private GameObject player;
@@ -20,6 +20,5 @@ public class AutoDevolvePool : MonoBehaviour
         {
             pooling.DevolveInstance(gameObject);
         }
-
     }
 }

@@ -35,7 +35,7 @@ public class ObjectPooling : MonoBehaviour
                 if (selectedIdx < 1)
                 {
                     pool[i] = (GameObject)Instantiate(obstacle.gameObj, transform.position,
-                        Quaternion.AngleAxis(90, Vector3.up));
+                        obstacle.gameObj.transform.rotation);
                     pool[i].transform.parent = transform;
                     pool[i].SetActive(false);
                     break;

@@ -10562,6 +10562,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: obstacles.Array.data[1].gameObj
+      value: 
+      objectReference: {fileID: 1639173763776078, guid: 3e3876d832cd3b045b5a2f2435605c77,
+        type: 2}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: obstacles.Array.data[0].spawnWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: obstacles.Array.data[1].spawnWeight
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
   m_IsPrefabParent: 0
