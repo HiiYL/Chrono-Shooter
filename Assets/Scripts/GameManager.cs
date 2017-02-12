@@ -4,7 +4,6 @@ using UnityEngine;
 
 
 public class GameManager : MonoBehaviour {
-	public SpawnableObject[] obstacles;
 	public GameObject player;
 	public GameObject pauseMenu;
     public static int HealthPacks = 1;
@@ -24,21 +23,17 @@ public class GameManager : MonoBehaviour {
     private ObjectPooling pool;
     private GameObject obj;
 
+    public Vector3 startPos = new Vector3(0, 0, 0);
+
     // Use this for initialization
     void Start () {
         pool = GameObject.FindGameObjectWithTag("ObstaclePool").GetComponent<ObjectPooling>();
-        foreach (SpawnableObject obstacle in obstacles){
-			totalWeights += obstacle.spawnWeight;
-		}
-
 		currentPlayerZCoord = player.transform.position.z;
-
-
 		for (int i = 0; i < objectsToSpawn; i++) {
             obj = pool.RetrieveInstance();
             if (obj)
             {
-                obj.transform.position = new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
+                obj.transform.position = startPos + new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
             }
 		}
 	}
@@ -66,7 +61,7 @@ public class GameManager : MonoBehaviour {
                 obj = pool.RetrieveInstance();
                 if (obj)
                 {
-                    obj.transform.position = new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
+                    obj.transform.position = startPos + new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
                 }
 			}
 			chunksLoaded = chunksLoaded + 1;

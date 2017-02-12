@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - ObstaclePool
   - Consumables
+  - Obstacle-Bomb
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Effects;
 
 public class DestroyOnContact : MonoBehaviour {
     public GameObject explosion;
@@ -24,6 +25,18 @@ public class DestroyOnContact : MonoBehaviour {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
             //Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+
+        if (other.tag == "Obstacle-Bomb")
+        {
+            if (explosion != null)
+            {
+                GameObject explosionObj = (GameObject) Instantiate(explosion, transform.position, transform.rotation);
+                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 5;
+                explosionObj.GetComponent<ParticleSystemMultiplier>().multiplier = 4;
+            }
+            Destroy(other.gameObject);
             Destroy(gameObject);
         }
 

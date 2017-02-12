@@ -31,8 +31,8 @@ public class ObjectPooling : MonoBehaviour
             foreach (SpawnableObject obstacle in obstacles)
             {
                 selectedIdx -= obstacle.spawnWeight;
-                print(selectedIdx);
-                if (selectedIdx < 1)
+                //print(selectedIdx);
+                if (selectedIdx <= 1)
                 {
                     pool[i] = (GameObject)Instantiate(obstacle.gameObj, transform.position,
                         obstacle.gameObj.transform.rotation);
@@ -46,7 +46,7 @@ public class ObjectPooling : MonoBehaviour
 
     public GameObject RetrieveInstance()
     {
-        print(pool.Length);
+        //print(pool.Length);
         foreach (GameObject go in pool)
         {
             if (go != null && !go.activeSelf)

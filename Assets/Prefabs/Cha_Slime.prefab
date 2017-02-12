@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114849027277950648}
   - component: {fileID: 65044126152460816}
   - component: {fileID: 54324290840875896}
+  - component: {fileID: 114309354199285098}
   m_Layer: 0
   m_Name: Cha_Slime
   m_TagString: Obstacle
@@ -237,6 +238,17 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &114309354199285098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639173763776078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4195f6712c1e6f64baeeb9f7f3f05d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114791301535240712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,8 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba99850b30d8b42f9900647240ebdefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBoxSpeed: 25
-  minBoxSpeed: 20
+  maxBoxSpeed: 5
+  minBoxSpeed: 6
   boxSpeed: 0
   moveBehaviour: 2
 --- !u!114 &114849027277950648

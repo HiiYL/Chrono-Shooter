@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4585214942247020}
-  - component: {fileID: 136027079504293670}
   - component: {fileID: 114414173406953664}
   - component: {fileID: 54839586884109488}
   - component: {fileID: 65729464220438532}
@@ -275,19 +274,6 @@ LensFlare:
     serializedVersion: 2
     m_Bits: 6
   m_Directional: 0
---- !u!136 &136027079504293670
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1131510433704750}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 5
-  m_Height: 65
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 35}
 --- !u!198 &198903585474373438
 ParticleSystem:
   m_ObjectHideFlags: 1
