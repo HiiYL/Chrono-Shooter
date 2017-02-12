@@ -633,6 +633,8 @@ MonoBehaviour:
   player: {fileID: 883234846}
   pauseMenu: {fileID: 1397243657}
   objectsToSpawn: 5
+  minX: -3.37
+  maxX: 3.5
   pauseCooldown: 0.3
   chunkLoadDist: 5
   startPos: {x: 62.97, y: 0, z: 0}
@@ -1217,6 +1219,12 @@ Prefab:
       propertyPath: obstacles.Array.data[1].spawnWeight
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1131510433704750, guid: 2cec2d0366eefc84587604d740a10651,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
   m_IsPrefabParent: 0
