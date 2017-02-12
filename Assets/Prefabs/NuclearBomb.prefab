@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 136004395064609270}
   - component: {fileID: 114495103587370686}
   - component: {fileID: 114546393457188354}
+  - component: {fileID: 114131660260304958}
   m_Layer: 0
   m_Name: NuclearBomb
   m_TagString: Obstacle
@@ -111,6 +112,18 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114131660260304958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d689a03ddcdb44b910e7945eb48745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cullRange: 5
 --- !u!114 &114495103587370686
 MonoBehaviour:
   m_ObjectHideFlags: 1

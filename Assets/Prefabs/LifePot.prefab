@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136531227280921560}
   - component: {fileID: 114355470425333990}
   - component: {fileID: 114220140017999834}
+  - component: {fileID: 114774206419473004}
   m_Layer: 0
   m_Name: LifePot
   m_TagString: Untagged
@@ -107,6 +108,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
+--- !u!114 &114774206419473004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458309965011254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d689a03ddcdb44b910e7945eb48745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 15
 --- !u!136 &136531227280921560
 CapsuleCollider:
   m_ObjectHideFlags: 1
