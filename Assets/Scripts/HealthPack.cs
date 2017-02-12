@@ -17,28 +17,19 @@ public class HealthPack : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Boundary" || other.tag == "Enemy")
+        string tag = collision.gameObject.tag;
+        if (tag == "Boundary" || tag == "Enemy")
         {
             return;
         }
 
-        if (other.tag == "Player")
+        if (tag == "Player")
         {
             Destroy(gameObject);
             Debug.Log("Health Pack!!");
             healthManager.Health += 1;
-        }
-        else if (other.tag == "Projectile")
-        {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-
-            if (explosion != null)
-            {
-                Instantiate(explosion, transform.position, transform.rotation);
-            }
         }
 
     }

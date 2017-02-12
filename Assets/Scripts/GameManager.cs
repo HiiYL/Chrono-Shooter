@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
             obj = pool.RetrieveInstance();
             if (obj)
             {
-                obj.transform.position = new Vector3(Random.Range(-3, 3), 2, player.transform.position.z + Random.Range(50, 100));
+                obj.transform.position = new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
             }
 		}
 	}
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour {
                 obj = pool.RetrieveInstance();
                 if (obj)
                 {
-                    obj.transform.position = new Vector3(Random.Range(-3, 3), 2, player.transform.position.z + Random.Range(50, 100));
+                    obj.transform.position = new Vector3(Random.Range(-3.37f, 3.5f), 2, player.transform.position.z + Random.Range(50, 100));
                 }
 			}
 			chunksLoaded = chunksLoaded + 1;
