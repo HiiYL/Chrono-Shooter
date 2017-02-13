@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
                 obj = pool.RetrieveInstance();
 				if (obj) {
 					obj.transform.position = startPos +
-					new Vector3 (Random.Range (minX, maxX), 2,
+					new Vector3 (Random.Range (minX, maxX), 3,
 							player.transform.position.z + Random.Range (50, 50 + chunkLoadDist));
 				}
 			}

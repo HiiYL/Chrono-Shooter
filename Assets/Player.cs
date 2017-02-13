@@ -28,6 +28,10 @@ public class Player : MonoBehaviour {
             trans.y += 5;
             Instantiate(explosion, trans, Quaternion.identity);
             healthManager.Health -= 1;
+			if (collision.gameObject.tag == "Obstacle-Bomb") {
+				collision.gameObject.transform.rotation = Quaternion.identity;
+				collision.gameObject.transform.Rotate (0, 180, 0);
+			}
 			collision.gameObject.SetActive (false);
             //			Destroy (col.gameObject);
         }

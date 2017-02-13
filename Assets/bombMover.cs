@@ -34,15 +34,17 @@ public class bombMover : MonoBehaviour {
         transform.Translate(Vector3.forward * Time.deltaTime * boxSpeed);
     }
 
-//	void OnCollisionEnter(Collision collision)
-//	{
-//		if (collision.gameObject.tag == "Ground") {
-//			if (explosion != null) {
-//				GameObject explosionObj = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
-//				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 1;
-//				explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 4;
-//			}
-//			gameObject.SetActive (false);
-//		}
-//	}
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.tag == "Ground") {
+			if (explosion != null) {
+				GameObject explosionObj = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
+				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 2;
+				explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 3;
+			}
+			gameObject.transform.rotation = Quaternion.identity;
+			gameObject.transform.Rotate (0, 180, 0);
+			gameObject.SetActive (false);
+		}
+	}
 }
