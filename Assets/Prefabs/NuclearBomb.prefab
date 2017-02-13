@@ -249,9 +249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e27c69a3a03e464194cdeaf20489318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBoxSpeed: 15
-  minBoxSpeed: 10
+  maxBoxSpeed: 30
+  minBoxSpeed: 25
   detectionRange: 25
+  correctionSpeed: 1
   explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
 --- !u!136 &136004395064609270
 CapsuleCollider:

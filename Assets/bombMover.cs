@@ -8,6 +8,7 @@ public class bombMover : MonoBehaviour {
     public int minBoxSpeed = 25;
 
     public float detectionRange = 25;
+	public float correctionSpeed = 1f;
 	public GameObject explosion;
 
     private float boxSpeed;
@@ -27,8 +28,8 @@ public class bombMover : MonoBehaviour {
 	void Update () {
         if (Vector3.Distance(player.transform.position, transform.position) < detectionRange)
         {
-            rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.transform.position - transform.position), Time.deltaTime * 0.5F);
+			rotation = Quaternion.LookRotation(player.transform.position - transform.position);
+			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * correctionSpeed);
         }
         transform.Translate(Vector3.forward * Time.deltaTime * boxSpeed);
     }
