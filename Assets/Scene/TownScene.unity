@@ -3258,7 +3258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthHUD: {fileID: 1055504707248964, guid: b6aa71da78244b54ca1d37d2756d2e63, type: 2}
   gameOverPanel: {fileID: 1714879426}
-  currentHealth: 25
+  currentHealth: 3
 --- !u!1 &119923688
 GameObject:
   m_ObjectHideFlags: 0

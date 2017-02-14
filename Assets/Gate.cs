@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Gate : MonoBehaviour {
+    public string nextScene;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class Gate : MonoBehaviour {
     {
         if (myTrigger.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("TerrainScene");
+            SceneManager.LoadScene(nextScene);
         }
     }
 }
