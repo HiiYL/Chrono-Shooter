@@ -7,17 +7,20 @@ public class bombMover : MonoBehaviour {
     public int maxBoxSpeed = 30;
     public int minBoxSpeed = 25;
 
-    public float detectionRange = 25;
-	public float correctionSpeed = 1f;
+    public float detectionRangeMin = 25;
+    public float detectionRangeMax = 40;
+    public float correctionSpeed = 1f;
 	public GameObject explosion;
 
     private float boxSpeed;
+    private float detectionRange;
     private GameObject player;
     private Quaternion rotation;
 
     // Use this for initialization
     void Start () {
         boxSpeed = Random.Range(minBoxSpeed, maxBoxSpeed);
+        detectionRange = Random.Range(detectionRangeMin, detectionRangeMax);
 
         player = GameObject.FindGameObjectWithTag("Player");
         
@@ -42,8 +45,10 @@ public class bombMover : MonoBehaviour {
 				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 2;
 				explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 3;
 			}
-			gameObject.transform.rotation = Quaternion.identity;
-			gameObject.transform.Rotate (0, 180, 0);
+            if (gameObject.GetComponent<TrailRenderer>())
+            {
+                gameObject.GetComponent<TrailRenderer>().Clear();
+            }
 			gameObject.SetActive (false);
 		}
 	}

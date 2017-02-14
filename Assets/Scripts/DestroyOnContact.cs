@@ -36,11 +36,17 @@ public class DestroyOnContact : MonoBehaviour {
                 explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 3;
                 explosionObj.GetComponent<ParticleSystemMultiplier>().multiplier = 4;
             }
-			other.gameObject.transform.rotation = Quaternion.identity;
-			other.gameObject.transform.Rotate (0, 180, 0);
+            if (other.gameObject.GetComponent<TrailRenderer>())
+            {
+                other.gameObject.GetComponent<TrailRenderer>().Clear();
+            }
 			other.gameObject.SetActive(false);
-			gameObject.transform.rotation = Quaternion.identity;
-			gameObject.transform.Rotate (0, 180, 0);
+
+
+            if (gameObject.GetComponent<TrailRenderer>())
+            {
+                gameObject.GetComponent<TrailRenderer>().Clear();
+            }
 			gameObject.SetActive (false);
         }
 

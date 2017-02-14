@@ -64,6 +64,10 @@ public class ObjectPooling : MonoBehaviour
         {
             if (!go.activeSelf)
             {
+                go.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                go.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                go.transform.rotation = Quaternion.identity;
+                go.transform.Rotate(0, 180, 0);
                 go.SetActive(true);
                 return go;
             }
@@ -92,10 +96,6 @@ public class ObjectPooling : MonoBehaviour
 		{
 			go.GetComponent<TrailRenderer>().Clear();
 		}
-        go.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        go.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-		go.transform.rotation = Quaternion.identity;
-		go.transform.Rotate (0, 180, 0);
         go.SetActive(false);
     }
 }
