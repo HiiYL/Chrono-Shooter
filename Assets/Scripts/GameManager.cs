@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour {
 	}
 	void chunkUpdateTrack(){
 		if ((playerMoved / chunkLoadDist) > chunksLoaded ) {
-			print ("Called Spawn Chunk!" + chunksLoaded);
+			//print ("Called Spawn Chunk!" + chunksLoaded);
 			for (int i = 0; i < objectsToSpawn; i++) {
                 obj = pool.RetrieveInstance();
 				if (obj) {
