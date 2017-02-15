@@ -49,8 +49,37 @@ public class GameManager : MonoBehaviour {
 			currentPlayerZCoord = player.transform.position.z;
 			chunkUpdateTrack ();
 		}
+        if(Input.GetKeyUp(KeyCode.F8))
+        {
+            PlayerPrefs.SetFloat("quicksave-x", player.transform.position.x);
+            PlayerPrefs.SetFloat("quicksave-y", player.transform.position.y);
+            PlayerPrefs.SetFloat("quicksave-z", player.transform.position.z);
+            PlayerPrefs.SetInt("health", player.GetComponent<Player>().healthManager.currentHealth);
+            print("saved");
+        }
+        if(Input.GetKeyUp(KeyCode.F11))
+        {
+            print("loading...");
+            if (PlayerPrefs.HasKey("quicksave-x") &&
+                PlayerPrefs.HasKey("quicksave-y") &&
+                PlayerPrefs.HasKey("quicksave-z"))
+            {
+                Vector3 quicksavedPos = new Vector3(
+                    PlayerPrefs.GetFloat("quicksave-x"),
+                    PlayerPrefs.GetFloat("quicksave-y"),
+                    PlayerPrefs.GetFloat("quicksave-z"));
+                player.transform.position = quicksavedPos;
+                player.GetComponent<Player>().healthManager.currentHealth = PlayerPrefs.GetInt("health");
+                print("load complete");
+            }
+            else
+            {
+                print("key missing");
+            }
+           
+        }
 	}
-	void chunkUpdateTrack(){
+    void chunkUpdateTrack(){
 		if ((playerMoved / chunkLoadDist) > chunksLoaded ) {
 			//print ("Called Spawn Chunk!" + chunksLoaded);
 			for (int i = 0; i < objectsToSpawn; i++) {
