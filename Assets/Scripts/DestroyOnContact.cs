@@ -22,7 +22,8 @@ public class DestroyOnContact : MonoBehaviour {
         {
             if (explosion != null)
             {
-                Instantiate(explosion, transform.position, transform.rotation);
+                GameObject explosionObj = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
+                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 20;
             }
             //Destroy(other.gameObject);
 			gameObject.SetActive(false);
@@ -33,7 +34,7 @@ public class DestroyOnContact : MonoBehaviour {
             if (explosion != null)
             {
 				GameObject explosionObj = (GameObject) Instantiate(explosionBomb, transform.position, transform.rotation);
-                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 100;
+                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 50;
 //                explosionObj.GetComponent<ParticleSystemMultiplier>().multiplier = 1;
             }
             if (other.gameObject.GetComponent<TrailRenderer>())
