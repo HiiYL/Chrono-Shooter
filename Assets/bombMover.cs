@@ -42,8 +42,8 @@ public class bombMover : MonoBehaviour {
 		if (collision.gameObject.tag == "Ground") {
 			if (explosion != null) {
 				GameObject explosionObj = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
-				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 2;
-				explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 3;
+				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 20;
+				//explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 3;
 			}
             if (gameObject.GetComponent<TrailRenderer>())
             {
