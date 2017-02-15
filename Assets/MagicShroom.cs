@@ -27,7 +27,7 @@ public class MagicShroom : MonoBehaviour {
 
         if (tag == "Player")
         {
-            gameManager.stopTime(3);
+            gameManager.stopTime(length);
             gameObject.SetActive(false);
            
         }
