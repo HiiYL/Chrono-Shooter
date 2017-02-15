@@ -815,7 +815,7 @@ Prefab:
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[1].spawnWeight
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
@@ -831,11 +831,20 @@ Prefab:
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[3].spawnWeight
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[3].gameObj
+      value: 
+      objectReference: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
+    - target: {fileID: 1176888936947768, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
+      propertyPath: m_Name
+      value: ObjectPool
+      objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: obstacles.Array.data[1].gameObj
       value: 
       objectReference: {fileID: 1426935100233392, guid: fec4c2db155fbb44ba2734b83825c420,
         type: 2}

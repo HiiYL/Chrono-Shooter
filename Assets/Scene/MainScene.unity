@@ -11339,7 +11339,7 @@ Prefab:
         type: 2}
       propertyPath: obstacles.Array.data[1].gameObj
       value: 
-      objectReference: {fileID: 1639173763776078, guid: 3e3876d832cd3b045b5a2f2435605c77,
+      objectReference: {fileID: 1426935100233392, guid: fec4c2db155fbb44ba2734b83825c420,
         type: 2}
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
@@ -11349,7 +11349,7 @@ Prefab:
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[1].spawnWeight
-      value: 29
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
@@ -11379,13 +11379,13 @@ Prefab:
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[3].spawnWeight
-      value: 5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[3].gameObj
       value: 
-      objectReference: {fileID: 1426935100233392, guid: fec4c2db155fbb44ba2734b83825c420,
+      objectReference: {fileID: 1639173763776078, guid: 3e3876d832cd3b045b5a2f2435605c77,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
