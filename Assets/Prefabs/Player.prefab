@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5001c65b6264c2990f39324a98534b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100000, guid: 0315cb4a52ecd4a46a4fe8f3b3500557, type: 2}
+  explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 2}
   healthManager: {fileID: 0}
 --- !u!136 &136457929375121928
 CapsuleCollider:

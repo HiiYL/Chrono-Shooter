@@ -120,7 +120,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   detectionRangeMin: 25
   detectionRangeMax: 25
   correctionSpeed: 1
-  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
+  explosion: {fileID: 1763293763179748, guid: ab36745b4eb254f619c01a929121893c, type: 2}
 --- !u!136 &136004395064609270
 CapsuleCollider:
   m_ObjectHideFlags: 1

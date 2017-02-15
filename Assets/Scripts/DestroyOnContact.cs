@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityStandardAssets.Effects;
 
 public class DestroyOnContact : MonoBehaviour {
-    public GameObject explosion;
+    public GameObject explosion, explosionBomb;
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +32,9 @@ public class DestroyOnContact : MonoBehaviour {
         {
             if (explosion != null)
             {
-                GameObject explosionObj = (GameObject) Instantiate(explosion, transform.position, transform.rotation);
-                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 3;
-                explosionObj.GetComponent<ParticleSystemMultiplier>().multiplier = 4;
+				GameObject explosionObj = (GameObject) Instantiate(explosionBomb, transform.position, transform.rotation);
+                explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 100;
+//                explosionObj.GetComponent<ParticleSystemMultiplier>().multiplier = 1;
             }
             if (other.gameObject.GetComponent<TrailRenderer>())
             {

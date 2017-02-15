@@ -271,7 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0990a9301fcde8345a4562495f220aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
+  explosion: {fileID: 1889817544024980, guid: 4623339c9be7b4711b3cda6608ce779a, type: 2}
+  explosionBomb: {fileID: 1763293763179748, guid: ab36745b4eb254f619c01a929121893c,
+    type: 2}
 --- !u!123 &123941308560998100
 LensFlare:
   m_ObjectHideFlags: 1

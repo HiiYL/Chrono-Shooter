@@ -12,11 +12,13 @@ namespace UnityStandardAssets.Effects
 
         private IEnumerator Start()
         {
+			float multiplier = 1;
             // wait one frame because some explosions instantiate debris which should then
             // be pushed by physics force
             yield return null;
-
-            float multiplier = GetComponent<ParticleSystemMultiplier>().multiplier;
+			if (GetComponent<ParticleSystemMultiplier> ()) {
+				multiplier = GetComponent<ParticleSystemMultiplier> ().multiplier;
+			}
 
             float r = 10*multiplier;
             var cols = Physics.OverlapSphere(transform.position, r);
