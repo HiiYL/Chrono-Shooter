@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 198940372762065674}
   - component: {fileID: 199497127269369076}
   - component: {fileID: 114114956319907838}
-  - component: {fileID: 114967189437517764}
   m_Layer: 0
   m_Name: MissileImpactEffect
   m_TagString: Untagged
@@ -178,19 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac1691131a8c844dafe8b6ace6a172a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 20
---- !u!114 &114967189437517764
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889817544024980}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 039587c051912eb4ead9e58344c5f3ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiplier: 0.5
+  explosionForce: 40
 --- !u!198 &198041143877495682
 ParticleSystem:
   m_ObjectHideFlags: 1

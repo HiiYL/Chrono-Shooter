@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4241546738796608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slime_Joint03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 65044126152460816}
   - component: {fileID: 54324290840875896}
   - component: {fileID: 114309354199285098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cha_Slime
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4849041609958148}
   - component: {fileID: 137976329700968634}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ModelSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4768551715589838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slime_Joint02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4939064733714276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slime_Joint01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4322229031617998}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -39,7 +39,7 @@ public class bombMover : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.tag == "Ground") {
+		if (collision.gameObject.tag == "Background") {
 			if (explosion != null) {
 				GameObject explosionObj = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
 				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 20;

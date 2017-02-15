@@ -11,6 +11,7 @@ TagManager:
   - Consumables
   - Obstacle-Bomb
   - Ground
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - 
   - 
   - Background
-  - 
-  - 
+  - Obstacle
+  - LevelBarrier
   - 
   - 
   - 
