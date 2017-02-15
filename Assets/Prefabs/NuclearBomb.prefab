@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e27c69a3a03e464194cdeaf20489318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBoxSpeed: 25
-  minBoxSpeed: 20
+  maxBoxSpeed: 20
+  minBoxSpeed: 15
   detectionRangeMin: 25
   detectionRangeMax: 25
   correctionSpeed: 1
