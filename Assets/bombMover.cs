@@ -29,6 +29,11 @@ public class bombMover : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Vector3 rot = transform.rotation.eulerAngles;
+        if(rot[1] < 90 || rot[1] > 270)
+        {
+            destroySelf();
+        }
         if (Vector3.Distance(player.transform.position, transform.position) < detectionRange)
         {
 			rotation = Quaternion.LookRotation(player.transform.position - transform.position);
@@ -37,19 +42,25 @@ public class bombMover : MonoBehaviour {
         transform.Translate(Vector3.forward * Time.deltaTime * boxSpeed);
     }
 
+    void destroySelf()
+    {
+        if (explosion != null)
+        {
+            GameObject explosionObj = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
+            explosionObj.GetComponent<ExplosionPhysicsForce>().explosionForce = 20;
+            //explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 3;
+        }
+        if (gameObject.GetComponent<TrailRenderer>())
+        {
+            gameObject.GetComponent<TrailRenderer>().Clear();
+        }
+        gameObject.SetActive(false);
+    }
+
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.tag == "Background") {
-			if (explosion != null) {
-				GameObject explosionObj = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
-				explosionObj.GetComponent<ExplosionPhysicsForce> ().explosionForce = 20;
-				//explosionObj.GetComponent<ParticleSystemMultiplier> ().multiplier = 3;
-			}
-            if (gameObject.GetComponent<TrailRenderer>())
-            {
-                gameObject.GetComponent<TrailRenderer>().Clear();
-            }
-			gameObject.SetActive (false);
-		}
+		if (collision.gameObject.layer == 8) {
+            destroySelf();
+        }
 	}
 }
