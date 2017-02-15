@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthPack : MonoBehaviour {
-
-    public GameObject explosion;
     private HealthManager healthManager;
 
     // Use this for initialization

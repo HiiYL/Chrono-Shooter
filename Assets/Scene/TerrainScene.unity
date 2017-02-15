@@ -757,7 +757,7 @@ Prefab:
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4621557717756966, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
       propertyPath: m_LocalPosition.x
@@ -823,6 +823,17 @@ Prefab:
       propertyPath: poolSize
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: obstacles.Array.data[3].spawnWeight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
+        type: 2}
+      propertyPath: obstacles.Array.data[3].gameObj
+      value: 
+      objectReference: {fileID: 1426935100233392, guid: fec4c2db155fbb44ba2734b83825c420,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4025870a06420ac45bf7f938d9f3a1fa, type: 2}
   m_IsPrefabParent: 0
@@ -1149,7 +1160,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2067820025}
   m_LocalRotation: {x: 0.30719787, y: -0, z: -0, w: 0.9516457}
-  m_LocalPosition: {x: 0, y: 5.65, z: -4.86}
+  m_LocalPosition: {x: 0, y: 50, z: -4.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

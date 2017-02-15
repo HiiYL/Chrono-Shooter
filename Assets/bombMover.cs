@@ -29,17 +29,20 @@ public class bombMover : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 rot = transform.rotation.eulerAngles;
-        if(rot[1] < 90 || rot[1] > 270)
+        if (!GameManager.isTimeFrozen)
         {
-            destroySelf();
+            Vector3 rot = transform.rotation.eulerAngles;
+            if (rot[1] < 90 || rot[1] > 270)
+            {
+                destroySelf();
+            }
+            if (Vector3.Distance(player.transform.position, transform.position) < detectionRange)
+            {
+                rotation = Quaternion.LookRotation(player.transform.position - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * correctionSpeed);
+            }
+            transform.Translate(Vector3.forward * Time.deltaTime * boxSpeed);
         }
-        if (Vector3.Distance(player.transform.position, transform.position) < detectionRange)
-        {
-			rotation = Quaternion.LookRotation(player.transform.position - transform.position);
-			transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * correctionSpeed);
-        }
-        transform.Translate(Vector3.forward * Time.deltaTime * boxSpeed);
     }
 
     void destroySelf()

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 // Hi! This script presents the overlay info for our tutorial content, linking you back to the relevant page.
@@ -66,17 +67,35 @@ public class TutorialInfo : MonoBehaviour
 		Application.OpenURL (url);
 	}
 
-	// continue to play, by ensuring the preference is set correctly, the overlay is not active, 
-	// and that the audio listener is enabled, and time scale is 1 (normal)
-	public void StartGame()
-	{		
-		overlay.SetActive (false);
-		mainListener.enabled = true;
-		Time.timeScale = 1f;
-	}
+    // continue to play, by ensuring the preference is set correctly, the overlay is not active, 
+    // and that the audio listener is enabled, and time scale is 1 (normal)
+    public void StartGame()
+    {
+        print("START GAME!");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainScene");
+    }
+    public void StartLevelOne()
+	{
+        print("START GAME!");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainScene");
+    }
+    public void StartLevelTwo()
+    {
+        print("START GAME!");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TerrainScene");
+    }
+    public void StartLevelThree()
+    {
+        print("START GAME!");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TownScene");
+    }
 
-	// set the boolean storing show at start status to equal the UI toggle's status
-	public void ToggleShowAtLaunch()
+    // set the boolean storing show at start status to equal the UI toggle's status
+    public void ToggleShowAtLaunch()
 	{
 		showAtStart = showAtStartToggle.isOn;
 		PlayerPrefs.SetInt(showAtStartPrefsKey, showAtStart ? 1 : 0);

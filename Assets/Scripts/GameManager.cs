@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour {
 
     public Vector3 startPos = new Vector3(0, 0, 0);
 
+    public static bool isTimeFrozen = false;
+
     // Use this for initialization
     void Start () {
         pool = GameObject.FindGameObjectWithTag("ObstaclePool").GetComponent<ObjectPooling>();
@@ -93,4 +95,17 @@ public class GameManager : MonoBehaviour {
 			chunksLoaded = chunksLoaded + 1;
 		}
 	}
+
+    public void stopTime(float length)
+    {
+        StartCoroutine(StopTime(length));
+    }
+    private IEnumerator StopTime(float length)
+    {
+        print("Freezing time!");
+        isTimeFrozen = true;
+        yield return new WaitForSeconds(length);
+        print("Unfreezing time!");
+        isTimeFrozen = false;
+    }
 }
