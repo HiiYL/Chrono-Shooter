@@ -664,6 +664,8 @@ MonoBehaviour:
   pauseCooldown: 0.3
   chunkLoadDist: 1
   startPos: {x: 62.97, y: 0, z: 0}
+  slowTimeSound: {fileID: 8300000, guid: 1b83debb2806e314c9acad22b67d74c6, type: 3}
+  slowTimeSoundDone: {fileID: 8300000, guid: 9803294bb797acc498cec52867974771, type: 3}
 --- !u!4 &1113605706
 Transform:
   m_ObjectHideFlags: 0

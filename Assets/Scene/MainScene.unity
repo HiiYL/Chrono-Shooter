@@ -11549,7 +11549,7 @@ Prefab:
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
       propertyPath: obstacles.Array.data[1].spawnWeight
-      value: 50
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114942909217402134, guid: 4025870a06420ac45bf7f938d9f3a1fa,
         type: 2}
