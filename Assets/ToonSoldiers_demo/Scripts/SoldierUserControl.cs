@@ -43,7 +43,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (Input.GetButton("Fire1") && Time.time > nextFire)
+			if ( (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space)) && Time.time > nextFire)
             {
                 m_Animator.SetBool("isShooting", true);
                 nextFire = Time.time + fireRate;

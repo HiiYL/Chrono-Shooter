@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour {
 	public void trackStopTime() {
 		if (frozenTimeLeft > 0) {
 			frozenTimeLeft -= Time.deltaTime;
-			print (frozenTimeLeft);
+//			print (frozenTimeLeft);
 		} else if (isTimeFrozen) {
 			print("Unfreezing time!");
 			gameEffectSource.PlayOneShot (slowTimeSoundDone);
