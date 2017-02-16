@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
     public Vector3 startPos = new Vector3(0, 0, 0);
 
     public static bool isTimeFrozen = false;
+	private float frozenTimeLeft = 0;
 	public AudioClip slowTimeSound,slowTimeSoundDone;
 
 	private AudioSource gameEffectSource;
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		trackStopTime ();
 		if (Input.GetKeyUp (KeyCode.Escape)) {
 			print ("Key Pressed");
 			if (!pauseMenu.activeSelf) {
@@ -109,9 +111,30 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void trackStopTime() {
+		if (frozenTimeLeft > 0) {
+			frozenTimeLeft -= Time.deltaTime;
+			print (frozenTimeLeft);
+		} else if (isTimeFrozen) {
+			print("Unfreezing time!");
+			gameEffectSource.PlayOneShot (slowTimeSoundDone);
+			mainCamera.GetComponent<AudioSource> ().pitch = 1.0f;
+			isTimeFrozen = false;
+		}
+	}
+
     public void stopTime(float length)
     {
-        StartCoroutine(StopTime(length));
+		if (!isTimeFrozen) {
+			mainCamera.GetComponent<AudioSource> ().pitch = 0.5f;
+			gameEffectSource.PlayOneShot (slowTimeSound);
+			print ("Freezing time!");
+			frozenTimeLeft = length;
+			isTimeFrozen = true;
+		} else {
+			frozenTimeLeft += length;
+		}
+//        StartCoroutine(StopTime(length));
     }
     private IEnumerator StopTime(float length)
     {
