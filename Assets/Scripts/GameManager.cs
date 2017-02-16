@@ -30,13 +30,23 @@ public class GameManager : MonoBehaviour {
     public Vector3 startPos = new Vector3(0, 0, 0);
 
     public static bool isTimeFrozen = false;
-	public AudioClip slowTimeSound;
+	public AudioClip slowTimeSound,slowTimeSoundDone;
+
+	private AudioSource gameEffectSource;
 
     // Use this for initialization
     void Start () {
         pool = GameObject.FindGameObjectWithTag("ObstaclePool").GetComponent<ObjectPooling>();
 		currentPlayerZCoord = player.transform.position.z;
 		mainCamera = Camera.main;
+
+		foreach(AudioSource sound in mainCamera.GetComponents<AudioSource>()) {
+			if(sound.isPlaying){
+				continue;
+			}
+			gameEffectSource = sound;
+		}
+
 	}
 	// Update is called once per frame
 	void Update () {
@@ -106,9 +116,11 @@ public class GameManager : MonoBehaviour {
     private IEnumerator StopTime(float length)
     {
 		mainCamera.GetComponent<AudioSource> ().pitch = 0.5f;
+		gameEffectSource.PlayOneShot (slowTimeSound);
         print("Freezing time!");
         isTimeFrozen = true;
         yield return new WaitForSeconds(length);
+		gameEffectSource.PlayOneShot (slowTimeSoundDone);
         print("Unfreezing time!");
         isTimeFrozen = false;
 		mainCamera.GetComponent<AudioSource> ().pitch = 1.0f;
