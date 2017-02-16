@@ -24,16 +24,19 @@ public class GameManager : MonoBehaviour {
 
     private int totalWeights = 0;
     private ObjectPooling pool;
-    private GameObject obj;
+	private GameObject obj;
+	private Camera mainCamera;
 
     public Vector3 startPos = new Vector3(0, 0, 0);
 
     public static bool isTimeFrozen = false;
+	public AudioClip slowTimeSound;
 
     // Use this for initialization
     void Start () {
         pool = GameObject.FindGameObjectWithTag("ObstaclePool").GetComponent<ObjectPooling>();
 		currentPlayerZCoord = player.transform.position.z;
+		mainCamera = Camera.main;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -102,10 +105,12 @@ public class GameManager : MonoBehaviour {
     }
     private IEnumerator StopTime(float length)
     {
+		mainCamera.GetComponent<AudioSource> ().pitch = 0.5f;
         print("Freezing time!");
         isTimeFrozen = true;
         yield return new WaitForSeconds(length);
         print("Unfreezing time!");
         isTimeFrozen = false;
+		mainCamera.GetComponent<AudioSource> ().pitch = 1.0f;
     }
 }
